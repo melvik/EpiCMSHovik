@@ -1,6 +1,8 @@
 ﻿@using EPiServer.Framework.Web.Mvc.Html
 @using EPiServer.Core
-@model PageData
+@using EpiCMSHovik.Models.Pages;
+@using EpiCMSHovik.Models.ViewModels;
+@model IPageViewModel<SitePageData>
 @{
     Layout = null;
 }
@@ -9,7 +11,7 @@
 
 <html>
 <head>
-    <title>@Model.PageName</title>
+    <title>@Model.CurrentPage.Name</title>
     <link rel="stylesheet" href="@Url.Content("~/Static/css/bootstrap.css")" />
     <link rel="stylesheet" href="@Url.Content("~/Static/css/bootstrap-responsive.css")" />
     <link rel="stylesheet" href="@Url.Content("~/Static/css/media.css")" />
@@ -25,12 +27,12 @@
         <div class="row">
             <div id="header">
                 <div class="span2">
-                    <img src="/Static/gfx/logotype.png"/>
+                    <img src="/Static/gfx/logotype.png" />
                 </div>
                 <div class="span10"></div>
             </div>
         </div>
-        <hr/>
+        <hr />
         @RenderBody()
     </div>
 </body>

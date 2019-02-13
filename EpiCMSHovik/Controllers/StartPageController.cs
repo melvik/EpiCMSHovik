@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using EpiCMSHovik.Models.Pages;
+using EpiCMSHovik.Models.ViewModels;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
@@ -13,10 +14,9 @@ namespace EpiCMSHovik.Controllers
     {
         public ActionResult Index(StartPage currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
+            DefaultPageViewModel<StartPage> pageViewModel = new DefaultPageViewModel<StartPage>(currentPage);
 
-            return View(currentPage);
+            return View(pageViewModel);
         }
     }
 }
