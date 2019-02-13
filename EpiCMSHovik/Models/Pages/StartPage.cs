@@ -19,9 +19,11 @@ namespace EpiCMSHovik.Models.Pages
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
 
-        [Display(GroupName = SystemTabNames.Content,
-            Order = 0)]
+        [Display(GroupName = SystemTabNames.Content, Order = 0)]
         public virtual string Heading { get; set; }
+
+        [Display(GroupName = SystemTabNames.Content, Order = 300)]
+        public virtual ContentArea MainContentArea { get; set; }
 
     }
 }

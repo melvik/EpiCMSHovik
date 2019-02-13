@@ -9,3 +9,4 @@
 <div>
     @Html.PropertyFor(m => m.CurrentPage.MainBody)
 </div>
+@Html.PropertyFor(m => m.CurrentPage.MainContentArea, new {cssClass = "row equal-height", tag = "span4"})
