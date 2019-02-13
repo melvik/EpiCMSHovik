@@ -216,9 +216,13 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Channels\MobileChannel.cs" />
+    <Compile Include="Business\Channels\MobileResolution.cs" />
     <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\ExtensionMethods.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
+    <Compile Include="Controllers\PagePartialController.cs" />
+    <Compile Include="Controllers\PagePartialWideController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
@@ -240,9 +244,12 @@
     <Folder Include="Models\Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\iPhone4\device-320x480.png" />
+    <Content Include="ClientResources\iPhone4\iPhone4.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="module.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -303,6 +310,8 @@
     <Content Include="Views\Shared\Layouts\_TwoPlusOne.cshtml" />
     <Content Include="Views\ProductPage\Index.cshtml" />
     <Content Include="Views\Shared\Navigation.cshtml" />
+    <Content Include="Views\Shared\PagePartials\PagePartial.cshtml" />
+    <Content Include="Views\Shared\PagePartials\PagePartialWide.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

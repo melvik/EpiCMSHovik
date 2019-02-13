@@ -10,6 +10,7 @@
         @Html.PropertyFor(x => x.CurrentPage.MainBody)
     </div>
 </div>
+@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row", tag = "span8" })
 
 @section RelatedContent
 {
@@ -23,4 +24,6 @@
         </h2>
         <p>@Html.PropertyFor(x => x.CurrentPage.UniqueSellingPoint)</p>
     </div>
+
+    @Html.PropertyFor(x => x.CurrentPage.RelatedContentArea, new { CssClass = "border", tag = "span4" })
 }
