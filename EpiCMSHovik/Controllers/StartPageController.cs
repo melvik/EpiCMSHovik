@@ -9,7 +9,7 @@ using EPiServer.Web.Mvc;
 
 namespace EpiCMSHovik.Controllers
 {
-    public class StartPageController : PageController<StartPage>
+    public class StartPageController : PageControllerBase<StartPage>
     {
         public ActionResult Index(StartPage currentPage)
         {

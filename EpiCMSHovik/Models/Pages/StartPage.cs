@@ -8,7 +8,7 @@ using EPiServer.SpecializedProperties;
 namespace EpiCMSHovik.Models.Pages
 {
     [ContentType(DisplayName = "StartPage", GUID = "5763f763-8921-43c5-a9bf-92bef246b41a", Description = "Alloy Start Page")]
-    public class StartPage : PageData
+    public class StartPage : SitePageData
     {
 
         [CultureSpecific]
