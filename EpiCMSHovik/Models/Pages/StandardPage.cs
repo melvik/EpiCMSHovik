@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using EpiCMSHovik.Models.Blocks;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -17,5 +18,8 @@ namespace EpiCMSHovik.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 310)]
         public virtual XhtmlString MainBody { get; set; }
+
+        [Display(Order = 320, GroupName = SystemTabNames.Content)]
+        public virtual TeaserBlock Teaser { get; set; }
     }
 }
