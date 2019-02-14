@@ -256,6 +256,9 @@
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\ViewModels\BlockEditPageViewModel.cs" />
     <Compile Include="Models\ViewModels\DefaultPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\FooterModel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\ListingBlockModel.cs" />
     <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
@@ -269,6 +272,7 @@
     <Content Include="ClientResources\iPhone4\iPhone4.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="IndexingService\IndexingService.svc" />
+    <Content Include="Resources\LanguageFiles\Views.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="module.config" />
@@ -340,6 +344,7 @@
     <Content Include="Views\ListingBlock\Index.cshtml" />
     <Content Include="Views\NewsPage\Index.cshtml" />
     <Content Include="Views\Shared\SubNavigation.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

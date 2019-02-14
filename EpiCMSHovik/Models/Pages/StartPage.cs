@@ -25,5 +25,10 @@ namespace EpiCMSHovik.Models.Pages
         [Display(GroupName = SystemTabNames.Content, Order = 300)]
         public virtual ContentArea MainContentArea { get; set; }
 
+        [Display(
+            Name = "Search",
+            GroupName = SystemTabNames.Settings)]
+        public virtual PageReference SearchPageLink { get; set; }
+
     }
 }

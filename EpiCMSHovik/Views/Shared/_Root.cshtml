@@ -2,6 +2,9 @@
 @using EPiServer.Core
 @using EpiCMSHovik.Models.Pages;
 @using EpiCMSHovik.Models.ViewModels;
+@using EpiCMSHovik.Helpers
+@using EpiCMSHovik.Business
+
 @model IPageViewModel<SitePageData>
 @{
     Layout = null;
@@ -29,11 +32,14 @@
                 <div class="span2">
                     <img src="/Static/gfx/logotype.png" />
                 </div>
-                <div class="span10">@{Html.RenderPartial("Navigation", Model);}</div>
+                <div class="span10">
+                    @{Html.RenderPartial("Navigation", Model);}
+                </div>
             </div>
         </div>
         <hr />
         @RenderBody()
+        @{Html.RenderPartial("Footer", new FooterModel(Model.CurrentPage));}
     </div>
 </body>
 </html>
